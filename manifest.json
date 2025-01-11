@@ -16,9 +16,18 @@
     },
     "permissions" : [
         "declarativeNetRequest",
-        "declarativeNetRequestFeedback"
+        "declarativeNetRequestFeedback",
+        "activeTab"
     ],
     "host_permissions" : [
         "http://*.google.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js" : ["scripts/content.js"],
+            "matches" : [
+                "<all_urls>"
+            ]
+        }
     ]
 }
